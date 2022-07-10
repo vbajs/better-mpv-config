@@ -1,20 +1,4 @@
-# better-mpv-config
-
-- Version: 1.0.7
-- Last Updated (AEST): 2022-06-02 01:19:57PM
-
-## What's New
-
-_Version 1.0.7_:
-- Updated shaders (should improve performance)
-
-_Version 1.0.6_ fixes:
-- [profile restore actions](https://mpv.io/manual/stable/#configuration-files-copy-equal)
-
-_Version 1.0.5_ adds:
-- meaningful profile descriptions
-- an "alongside" optional mpv.conf (for users who want the config file next to mpv.exe)
-- hotfix for "alongside" config, fixed three paths
+# better-mpv-config (vbajs's fork)
 
 ## Intro
 
@@ -26,12 +10,16 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
 - auto-hides the cursor after 1 second
 - saves the seekbar position on exit
 - uses an extra large RAM cache
-- normalizes audio
+- normalizes audio (disabled by default, revertable)
 - sets Color Space, Dithering, Debanding, Subtitles
 - sets Motion Interpolation, Anti-Ringing and Upscaling & Processing
 - now uses shaders for improved visuals
 - improves profiles for https and http protocols
 - adds no additional cruft...
+    + vbajs's changes:
+     - makes mpv remain open after playback is over
+     - nerfed shaders and scaling options (revertable)
+     - auto subtitle file pathing
 
 ## Credits
 
@@ -41,11 +29,17 @@ Thanks to all the original creators for making awesome shaders and extra work:
 * [KrigBilateral by Shiandow](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [SSimSuperRes by Shiandow](https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b)
 * [SSimDownscaler by Shiandow](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
+* [NNEDI3](https://github.com/bjin/mpv-prescalers/blob/master/nnedi3-nns64-win8x6.hook)
 
 Includes selected lines from Mike Connelly's work on MPV.
 
 * GitHub Repo: https://github.com/classicjazz/mpv-config
 * Article: https://freetime.mikeconnelly.com/archives/5371
+
+As well as selected lines from Kokomins blogs and  LightArrowsEXE's mpv.conf
+* Article: https://kokomins.wordpress.com/2019/10/14/mpv-config-guide/#external-shaders
+
+* Github Repo: https://github.com/LightArrowsEXE/dotfiles/blob/master/mpv/.config/mpv/mpv.conf
 
 ## Requirements
 
@@ -59,7 +53,14 @@ Includes selected lines from Mike Connelly's work on MPV.
 
 ### Windows Users
 
-Extract the ZIP in the releases section to the location: `%APPDATA%/mpv/`
+Download repo as a ZIP via the "Code" button then extract the ZIP in the releases section to the location: `%APPDATA%/mpv/`
+
+* Additional for better video playback:
+
+    Go to windows settings>system>display>scroll down to graphic settings
+    Then you'll need to browse to the path of where mpv.exe is stored and choose high performance
+    
+![graphic settings example](https://raw.githubusercontent.com/vbajs/better-mpv-config/master/graphic%20settings%20example.jpg)
 
 ### Linux Users
 
@@ -82,6 +83,7 @@ I don't own any Mac PCs to test it so even if I wanted to I could not.
 ### Vital Notes
 
 If you run into playback issues then remove the __first 5 lines__ and save changes to the file 'mpv.conf'.
+You can also read into the 'mpv.conf' file for the (revertable) options
 
 ## Custom Profiles
 
