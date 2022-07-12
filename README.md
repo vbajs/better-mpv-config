@@ -60,7 +60,7 @@ As well as selected lines from Kokomins blogs, LightArrowsEXE's mpv.conf and iam
 
 ### Windows Users
 
-Download repo as a ZIP via the "Code" button then extract the ZIP in the releases section to the location: `%APPDATA%/mpv/`
+Download repo as a ZIP via the "Code" button then extract the ZIP to the location: `%APPDATA%/mpv/`
 
 * Additional for better video playback:
 
