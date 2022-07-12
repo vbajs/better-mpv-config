@@ -86,7 +86,7 @@ I don't own any Mac PCs to test it so even if I wanted to I could not.
 
 ### Vital Notes
 
-If you run into playback issues then commemt the __first 5 lines__ and save changes to the file 'mpv.conf'.
+If you run into playback issues then comment the __first 5 lines__ and save changes to the file 'mpv.conf'.
 You can also read into the 'mpv.conf' file for the (revertable) options
 
 ## Custom Profiles
