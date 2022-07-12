@@ -20,8 +20,10 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
      - makes mpv remain open after playback is over
      - nerfed shaders and scaling options (revertable)
      - auto subtitle file pathing
-     - use GPU Next (disabled by default)
+     - use GPU Next (will be needed to be disabled if you are not using latest mpv git verison, see Vital Notes for more info)
      - HW decoding disabled by default (revertable)
+
+This fork was made to ease performace at the trade of slightly decreased visuals, it was tested on a Ryzen 5 3500U APU that uses Vega 8 graphics. If you are not using an APU and actually have a decent CPU+GPU, please do not use this fork and use the [base repo](https://github.com/hl2guide/better-mpv-config) instead.
 
 ## Credits
 
@@ -31,6 +33,7 @@ Thanks to all the original creators for making awesome shaders and extra work:
 * [KrigBilateral by Shiandow](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [SSimSuperRes by Shiandow](https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b)
 * [SSimDownscaler by Shiandow](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
+* [ACME-0.5x](https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed)
 
 Includes selected lines from Mike Connelly's work on MPV.
 
@@ -86,7 +89,10 @@ I don't own any Mac PCs to test it so even if I wanted to I could not.
 
 ### Vital Notes
 
-If you run into playback issues then comment the __first 5 lines__ and save changes to the file 'mpv.conf'.
+If you are gettig audio playback only/no vo error then either use latest mpv git verison or change the ``vo=gpu-next`` line to ``vo=gpu``.
+
+If you run into playback issues then comment the __uncommented 2 lines__ and save changes to the file 'mpv.conf'.
+
 You can also read into the 'mpv.conf' file for the (revertable) options
 
 ## Custom Profiles
