@@ -20,6 +20,8 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
      - makes mpv remain open after playback is over
      - nerfed shaders and scaling options (revertable)
      - auto subtitle file pathing
+     - use GPU Next (disabled by default)
+     - HW decoding disabled by default (revertable)
 
 ## Credits
 
@@ -29,15 +31,17 @@ Thanks to all the original creators for making awesome shaders and extra work:
 * [KrigBilateral by Shiandow](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [SSimSuperRes by Shiandow](https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b)
 * [SSimDownscaler by Shiandow](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
-* [NNEDI3](https://github.com/bjin/mpv-prescalers/blob/master/nnedi3-nns64-win8x6.hook)
 
 Includes selected lines from Mike Connelly's work on MPV.
 
 * GitHub Repo: https://github.com/classicjazz/mpv-config
 * Article: https://freetime.mikeconnelly.com/archives/5371
 
-As well as selected lines from Kokomins blogs and  LightArrowsEXE's mpv.conf
+As well as selected lines from Kokomins blogs, LightArrowsEXE's mpv.conf and iamscum's guide.
+
 * Article: https://kokomins.wordpress.com/2019/10/14/mpv-config-guide/#external-shaders
+
+* Article: https://iamscum.wordpress.com/guides/videoplayback-guide/mpv-conf/
 
 * Github Repo: https://github.com/LightArrowsEXE/dotfiles/blob/master/mpv/.config/mpv/mpv.conf
 
@@ -82,7 +86,7 @@ I don't own any Mac PCs to test it so even if I wanted to I could not.
 
 ### Vital Notes
 
-If you run into playback issues then remove the __first 5 lines__ and save changes to the file 'mpv.conf'.
+If you run into playback issues then commemt the __first 5 lines__ and save changes to the file 'mpv.conf'.
 You can also read into the 'mpv.conf' file for the (revertable) options
 
 ## Custom Profiles
