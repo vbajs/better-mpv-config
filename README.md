@@ -33,7 +33,6 @@ Thanks to all the original creators for making awesome shaders and extra work:
 * [KrigBilateral by Shiandow](https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637)
 * [SSimSuperRes by Shiandow](https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b)
 * [SSimDownscaler by Shiandow](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
-* [ACME-0.5x](https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed)
 
 Includes selected lines from Mike Connelly's work on MPV.
 
