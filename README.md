@@ -20,9 +20,9 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
      - makes mpv remain open after playback is over
      - nerfed shaders and scaling options (revertable)
      - auto subtitle file pathing
-     - use GPU Next (will be needed to be disabled if you are not using latest mpv git verison, see Vital Notes for more info)
      - HW decoding disabled by default (revertable)
      - acme-0.5x is used as the only shader for 4k (disabled by default for 1440p) to ease downscaling 
+     - adds keybinds (See [Keybinds](https://github.com/vbajs/better-mpv-config#keybinds) for more info)
 
 This fork was made to ease performace at the trade of slightly decreased visuals, it was tested on a Ryzen 5 3500U APU that uses Vega 8 graphics is outputting to a 1080p display. 
 
@@ -86,13 +86,11 @@ I don't own any Mac PCs to test it so even if I wanted to I could not.
 
 ## Usage
 
-* Extract to the correct location (as above) for your Operating System (pick between _mpv.conf_ and _alongside_, renaming to _mpv.conf_).
+* Extract to the correct location (as above) for your Operating System (pick between _mpv.conf_ and _alongside_, renaming to _mpv.conf_, same goes for _input.conf_).
 * Next time MPV is launched, and thereafter the settings should load. (command line or GUI)
 * An initial seek time of 1 second is normal (tested on an old PC with 4 CPU cores) due to new shaders
 
 ### Vital Notes
-
-If you are gettig audio playback only/no vo error then either use latest mpv git verison or change the ``vo=gpu-next`` line to ``vo=gpu``.
 
 If you run into playback issues then comment the __uncommented 2 lines__ and save changes to the file 'mpv.conf'.
 
@@ -151,3 +149,17 @@ __Using the "profile" switch__
 #### Linux
 
 Same as above but remove the `.exe` in the examples.
+
+## Keybinds
+
+This config adds the following keybinds that do the following
+
+| Keybind       | Action        |
+| ------------- |:-------------:|
+| k             | Shuffles files order |
+| Alt+k         | Shuffles playlist order |
+| Alt+a         | Enable Audio normalization |
+| Ctrl+a        | Disable Audio normalization |
+| Alt+7         | Enable KrigBilateral shader |
+| Alt+8         | Enable acme-0.5x shader |
+| Alt+9         | Disable **all** shaders |
