@@ -63,7 +63,14 @@ As well as selected lines from Kokomins blogs, LightArrowsEXE's mpv.conf and iam
 
 ### Windows Users
 
-Download repo as a ZIP via the "Code" button then extract the ZIP to the location: `%APPDATA%/mpv/`
+Download either of the zip files from the releases section:
+
+`mpv-config.zip` should be extracted at the location `%APPDATA%/mpv/`
+
+`mpv-alongside-config.zip` should be extracted at the location of where _mpv.exe_ is stored, you can find out by entering the following command into cmd `where mpv` (if it can recongize `mpv` command)
+
+You'll also additionally need to rename the files if you choose to extract at where mpv.exe is stored, see [Usage](https://github.com/vbajs/better-mpv-config#usage) for more info
+<!-- TODO: Better organise so peeps don't have to rename and can simply extract -->
 
 * Additional for better video playback:
 
