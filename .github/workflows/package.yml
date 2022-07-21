@@ -1,0 +1,46 @@
+name: Package and release zips
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Upload mpv-config
+        uses: actions/upload-artifact@v3
+        if: startsWith(github.ref, 'refs/tags/') == false
+        with:
+          name: mpv-config
+          path: |
+            shaders
+            input.conf
+            mpv.conf
+
+      - name: Upload mpv-alongside-config
+        uses: actions/upload-artifact@v3
+        if: startsWith(github.ref, 'refs/tags/') == false
+        with:
+          name: mpv-alongside-config
+          path: |
+            shaders
+            input (alongside).conf
+            mpv (alongside).conf
+
+      - name: Create zips for release
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          zip -r mpv-config.zip shaders input.conf mpv.conf
+          zip -r mpv-alongside-config.zip shaders "input (alongside).conf" "mpv (alongside).conf"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            mpv-config.zip
+            mpv-alongside-config.zip
