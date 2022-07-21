@@ -159,6 +159,7 @@ This config adds the following keybinds that do the following
 | k             | Shuffle/Unshuffle files order |
 | Alt+k         | Shuffles playlist order |
 | M (Shift+m)   | Enable/Disable motion interpolation |
+| Q (Shift+q)   | Don't save/save playback position on quit |
 | Alt+a         | Enable Audio normalization |
 | Ctrl+a        | Disable Audio normalization |
 | Alt+7         | Enable KrigBilateral shader |
