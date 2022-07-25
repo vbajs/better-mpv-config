@@ -69,7 +69,7 @@ Download either of the zip files from the releases section:
 
 `mpv-alongside-config.zip` should be extracted at the location of where _mpv.exe_ is stored, you can find out by entering the following command into cmd `where mpv` (if it can recongize `mpv` command)
 
-You will need to take out the files from the _alongside_ folder found in the zip and outside of the _alongside_ folder
+You will need to take out the files from the _alongside_ folder found in the zip to outside to the root directory (In which is where your _mpv.exe_ is stored)
 
 * Additional for better video playback:
 
