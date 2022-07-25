@@ -28,14 +28,13 @@ jobs:
           name: mpv-alongside-config
           path: |
             shaders
-            alongside/mpv.conf
-            alongside/input.conf
+            alongside
 
       - name: Create zips for release
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           zip -r mpv-config.zip shaders input.conf mpv.conf
-          zip -r mpv-alongside-config.zip shaders alongside/mpv.conf alongside/input.conf
+          zip -r mpv-alongside-config.zip shaders alongside
 
       - name: Create release
         uses: softprops/action-gh-release@v1
