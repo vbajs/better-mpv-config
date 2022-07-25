@@ -39,8 +39,9 @@ However, the increase in performance was not enough to
 - Downscale 4K resolutions (even without any shaders) so acme-0.5x will still be used
 - For ravu and SSimDs to be used with KrigBilateral
 
-So I have instead decided to improvise and edit the config so that luma scaling is a higher priority than chroma scaling in resolutions that are either above or below **1080p**
-Do not worry, `cscale=mitchell` is still enabled so that there will be chroma scaling to some degree and using the 1080p profiles, make Krig only used at 1080p since no luma scaling will be taking place (assuming once again 1080p is your screen's native resolution)
+So I have instead decided to improvise and edit the config so that luma scaling is a higher priority than chroma scaling in resolutions that are either above or below **1920x1080**
+
+Do not worry, `cscale=mitchell` is still enabled so that there will be chroma scaling to some degree and using the 1080p profiles, make Krig only used at 1080p since no luma scaling will be taking place (assuming once again **1920x1080** is your screen's native resolution)
 
 <!-- TODO: try to use ravu (rgb/yuv) variants for chroma scaling -->
 
