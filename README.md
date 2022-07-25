@@ -82,7 +82,7 @@ As well as selected lines from Kokomins blogs, LightArrowsEXE's mpv.conf and iam
 
 ### Windows Users
 
-Download either of the zip files from the releases section:
+Download either of the zip files from the releases section (Old releases will be marked as pre-release, latest will be marked as latest):
 
 `mpv-config.zip` should be extracted at the location `%APPDATA%/mpv/`
 
