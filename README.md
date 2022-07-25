@@ -18,15 +18,33 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
 - adds no additional cruft...
     + vbajs's changes:
      - makes mpv remain open after playback is over
-     - nerfed shaders and scaling options (revertable)
+     - makes mpv start fullscreen
      - auto subtitle file pathing
-     - HW decoding disabled by default (revertable)
-     - acme-0.5x is used as the only shader for 4k (disabled by default for 1440p) to ease downscaling 
+     - acme-0.5x is used as the only shader for 4K to ease downscaling 
+     - ravu-lite-r4 is now used instead of FSRCNNX
+     - Krig is used as the only shader for 1080p (assuming native resolution is 1080p, read [this](https://github.com/vbajs/better-mpv-config/blob/master/README.md#regarding-the-new-release) for more info)
      - adds keybinds (See [Keybinds](https://github.com/vbajs/better-mpv-config#keybinds) for more info)
 
 This fork was made to ease performace at the trade of slightly decreased visuals, it was tested on a Ryzen 5 3500U APU that uses Vega 8 graphics is outputting to a 1080p display. 
 
 If you are not using an APU and actually have a decent CPU+GPU, please do not use this fork and use the [base repo](https://github.com/hl2guide/better-mpv-config) instead.
+
+### Regarding the new release
+
+After some investigation, it turns the cause for poor performance of Ryzen 5 3500U APU was caused by the use of modded AMD GPU drivers that were meant to improve performance but did the opposite instead. When I switched back to stock AMD drivers, there was a significant performance boost that allows me to
+- Use ravu-lite-r4 instead of SSimSuperRes [(As it was mathmatically proven to be better)](https://artoriuz.github.io/blog/mpv_upscaling.html#results)
+- Use SSimDownscaler at 2K resolutions and downscaling ravu to 1x (ravu upscales to 2x)
+
+However, the increase in performance was not enough to
+- Downscale 4K resolutions (even without any shaders) so acme-0.5x will still be used
+- For ravu and SSimDs to be used with KrigBilateral
+
+So I have instead decided to improvise and edit the config so that luma scaling is a higher priority than chroma scaling in resolutions that are either above or below **1080p**
+Do not worry, `cscale=mitchell` is still enabled so that there will be chroma scaling to some degree and using the 1080p profiles, make Krig only used at 1080p since no luma scaling will be taking place (assuming once again 1080p is your screen's native resolution)
+
+<!-- TODO: try to use ravu (rgb/yuv) variants for chroma scaling -->
+
+So if you are now experiencing performance issues compared to the [38e885e release](https://github.com/vbajs/better-mpv-config/releases/tag/38e885e) then I recommend you to use that release instead
 
 ## Credits
 
@@ -37,6 +55,7 @@ Thanks to all the original creators for making awesome shaders and extra work:
 * [SSimSuperRes by Shiandow](https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b)
 * [SSimDownscaler by Shiandow](https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10)
 * [acme-0.5x](https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed)
+* [ravu-lite-r4](https://github.com/bjin/mpv-prescalers/blob/master/vulkan/ravu-lite-r4.hook)
 
 Includes selected lines from Mike Connelly's work on MPV.
 
