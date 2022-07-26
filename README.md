@@ -22,7 +22,7 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
      - auto subtitle file pathing
      - acme-0.5x is used as the only shader for 4K to ease downscaling 
      - ravu-lite-r4 is now used instead of FSRCNNX
-     - Krig is used as the only shader for 1080p (assuming native resolution is 1080p, read [this](https://github.com/vbajs/better-mpv-config/blob/master/README.md#regarding-the-new-release) for more info)
+     - Krig is used as the only shader for 1080p (assuming native resolution is 1080p, read [this](https://github.com/vbajs/better-mpv-config#regarding-the-new-release) for more info)
      - adds keybinds (See [Keybinds](https://github.com/vbajs/better-mpv-config#keybinds) for more info)
 
 This fork was made to ease performace at the trade of slightly decreased visuals, it was tested on a Ryzen 5 3500U APU that uses Vega 8 graphics is outputting to a 1080p display. 
