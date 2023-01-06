@@ -18,7 +18,6 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
 - adds no additional cruft...
     + vbajs's changes:
      - makes mpv remain open after playback is over
-     - makes mpv start fullscreen
      - auto subtitle file pathing
      - acme-0.5x is used as the only shader for 4K to ease downscaling 
      - ravu-lite-r4 is now used instead of FSRCNNX
@@ -187,6 +186,7 @@ This config adds the following keybinds that do the following
 | M (Shift+m)   | Enable/Disable motion interpolation |
 | D (Shift+d) 	| Enable/Disable debanding |
 | Q (Shift+q)   | Don't save/save playback position on quit |
+| T (Shift+t)	| Make the mpv window stay/dont stay ontop of other windows
 | Alt+a         | Enable/Disable Audio normalization |
 | Alt+7         | Toggle KrigBilateral shader on command |
 | Alt+8         | Toggle acme-0.5x shader on command |
