@@ -7,9 +7,9 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
 - has useful defaults
 - offers profiles
 - hides the window title bar
-- auto-hides the cursor after 1 second
+- auto-hides the cursor after 400ms
 - saves the seekbar position on exit
-- uses an extra large RAM cache
+- uses an large RAM cache
 - normalizes audio (disabled by default, revertable)
 - sets Color Space, Dithering, Debanding, Subtitles
 - sets Anti-Ringing and Upscaling & Processing
@@ -22,6 +22,10 @@ This is an improved MPV Media Player configuration file (and shaders folder) tha
      - acme-0.5x is used as the only shader for 4K to ease downscaling 
      - SSimSuperRes is now used instead of FSRCNNX
      - disable motion interpolation
+     - disable autoplay (inherited from base repo's v3 config)
+     - use max quality for HLS streams (inherited from base repo's v3 config)
+     - force videos to be seekable (inherited from base repo's v3 config)
+     - prefetch playlists (inherited from base repo's v3 config)
      - adds keybinds (See [Keybinds](https://github.com/vbajs/better-mpv-config#keybinds) for more info)
 
 This fork was made to ease performace at the trade of slightly decreased visuals, it was tested on a Ryzen 5 3500U APU that uses Vega 8 graphics is outputting to a 1080p display. 
