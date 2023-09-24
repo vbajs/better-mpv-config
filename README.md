@@ -1,3 +1,9 @@
+# Archived
+## The [upstream base repo](https://github.com/hl2guide/better-mpv-config) has now being reworked and now uses much less performance intensive shaders (similar to the ones used here) and thus, I have no time nor motivation to maintain this fork
+### Please use the base repo, thank you
+
+<details><summary><h2>Old README</h2></summary>
+
 # better-mpv-config (vbajs's fork)
 
 ## Intro
